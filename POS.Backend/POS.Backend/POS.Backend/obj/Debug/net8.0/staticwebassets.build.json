@@ -1,0 +1,20 @@
+{
+  "Version": 1,
+  "Hash": "uQXUVj2W1XEexZpLNdUs7Gqf/NMb6DGuLuffAGbODjw=",
+  "Source": "POS.Backend",
+  "BasePath": "_content/POS.Backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "POS.Backend\\wwwroot",
+      "Source": "POS.Backend",
+      "ContentRoot": "D:\\Systems Limited\\POS Project\\POS.Backend\\POS.Backend\\POS.Backend\\wwwroot\\",
+      "BasePath": "_content/POS.Backend",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [],
+  "Endpoints": []
+}

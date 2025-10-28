@@ -1,0 +1,56 @@
+[21:31:33 INF] Starting POS web app...
+[21:33:08 INF] Starting POS web app...
+[21:33:10 INF] Application started. Press Ctrl+C to shut down.
+[21:33:10 INF] Hosting environment: Development
+[21:33:10 INF] Content root path: D:\Systems Limited\POS Project\POS.Backend\POS.Backend\POS.Backend
+[21:33:59 INF] ---------------------------------------------------------------------------------------------------------------------------------------
+[21:33:59 INF] Incomming API Request
+Http Method : POST
+Path : /api/Auth/Login
+Controller: Auth
+API : Login
+RequestBody : {
+    "username":"salman1",
+    "password":"Salman@1234"
+}
+
+[21:33:59 INF] Outgoing API Response
+Http Status : 400
+Controller: Auth
+API : Login
+ResponseBody : {"isSuccess":false,"responseCode":400,"message":"Validation failed","data":"Email is required"}
+
+[21:34:11 INF] ---------------------------------------------------------------------------------------------------------------------------------------
+[21:34:11 INF] Incomming API Request
+Http Method : POST
+Path : /api/Auth/Login
+Controller: Auth
+API : Login
+RequestBody : {
+    "email":"salman1",
+    "password":"Salman@1234"
+}
+
+[21:34:11 INF] Outgoing API Response
+Http Status : 400
+Controller: Auth
+API : Login
+ResponseBody : {"isSuccess":false,"responseCode":400,"message":"Validation failed","data":"Invalid email address"}
+
+[21:34:21 INF] ---------------------------------------------------------------------------------------------------------------------------------------
+[21:34:21 INF] Incomming API Request
+Http Method : POST
+Path : /api/Auth/Login
+Controller: Auth
+API : Login
+RequestBody : {
+    "email":"salman@gmail.com",
+    "password":"Salman@1234"
+}
+
+[21:34:21 INF] Outgoing API Response
+Http Status : 200
+Controller: Auth
+API : Login
+ResponseBody : {"isSuccess":true,"responseCode":200,"message":"Login successful","data":{"email":"salman@gmail.com","accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ZDc2ZjY1OC1iZDA4LTRhZjktODk5Yi1mZTZjN2U1MzRlNWIiLCJ1c2VySWQiOiI2ZDc2ZjY1OC1iZDA4LTRhZjktODk5Yi1mZTZjN2U1MzRlNWIiLCJ1RnVsbE5hbWUiOiJzYWxtYW4iLCJ1RW1haWwiOiJzYWxtYW5AZ21haWwuY29tIiwibmJmIjoxNzYxNjY5MjYxLCJleHAiOjE3NjE2NzEwNjEsImlzcyI6IlBPU0lzc3VlciIsImF1ZCI6IlBPU1VzZXJzIn0.FNRRxedWRPfWkmsLULAOOqGrOYjxcSo6J3_4n6wJzp4","refreshToken":"23234234","isOtpEnable":false}}
+

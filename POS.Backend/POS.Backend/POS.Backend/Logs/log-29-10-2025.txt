@@ -1,0 +1,4 @@
+[00:11:11 INF] Starting POS web app...
+[00:11:13 INF] Application started. Press Ctrl+C to shut down.
+[00:11:13 INF] Hosting environment: Development
+[00:11:13 INF] Content root path: D:\Systems Limited\POS Project\POS.Backend\POS.Backend\POS.Backend
