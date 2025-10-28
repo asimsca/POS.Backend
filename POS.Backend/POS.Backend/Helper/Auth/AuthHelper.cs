@@ -19,7 +19,17 @@ namespace POS.Backend.Helper.Auth
                         ValidateIssuerSigningKey = true,
                         ValidIssuer = AuthOptions.Issuer, // Ideally: _configuration["Jwt:Issuer"]
                         ValidAudience = AuthOptions.Audience, // Ideally: _configuration["Jwt:Audience"]
+                        //IssuerSigningKey = AuthOptions.GetSymmetricSecurityKey()   // Or _configuration["Jwt:SecretKey"]
                         IssuerSigningKey = AuthOptions.GetSymmetricSecurityKey()   // Or _configuration["Jwt:SecretKey"]
+                    };
+
+                    options.Events = new JwtBearerEvents
+                    {
+                        OnAuthenticationFailed = ctx =>
+                        {
+                            Console.WriteLine($"JWT Validation Failed: {ctx.Exception.Message}");
+                            return Task.CompletedTask;
+                        }
                     };
                 });
 

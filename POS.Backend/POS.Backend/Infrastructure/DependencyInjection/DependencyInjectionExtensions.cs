@@ -15,12 +15,14 @@ namespace POS.Backend.Infrastructure.DependencyInjection
             #region Logic Scoped Region
             services.AddScoped<IPOSLogic, POSLogic>();
             services.AddScoped<IAuthLogic, AuthLogic>();
+            services.AddScoped<ISaleLogic, SaleLogic>();
             #endregion
 
             // Data Access Layer Service Collection
             #region DAL(Database) Scoped Region
             services.AddScoped<IPOSDb, POSDb>();
             services.AddScoped<IAuthDb, AuthDb>();
+            services.AddScoped<ISaleDb, SaleDb>();
             #endregion
 
             // Data Access Layer Service Collection

@@ -2,7 +2,7 @@
 {
     public class ConnectionStrings
     {
-        public string POSDb { get; set; }
+        public string PosDb { get; set; }
 
     }
 }

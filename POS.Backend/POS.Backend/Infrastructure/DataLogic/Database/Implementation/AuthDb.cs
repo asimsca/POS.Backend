@@ -42,7 +42,7 @@ namespace POS.Backend.Infrastructure.DataLogic.Database.Implementation
                 bool isOtpEnabled = this.config.Value.IsOtpEnabled;
 
 
-                using var conn = new NpgsqlConnection(config.Value.ConnectionStrings.POSDb);
+                using var conn = new NpgsqlConnection(config.Value.ConnectionStrings.PosDb);
                 using var cmd = new NpgsqlCommand("sp_login_user", conn)
                 {
                     CommandType = CommandType.StoredProcedure
@@ -121,7 +121,7 @@ namespace POS.Backend.Infrastructure.DataLogic.Database.Implementation
 
             try
             {
-                using var conn = new NpgsqlConnection(config.Value.ConnectionStrings.POSDb);
+                using var conn = new NpgsqlConnection(config.Value.ConnectionStrings.PosDb);
                 using var cmd = new NpgsqlCommand("sp_add_user", conn)
                 {
                     CommandType = CommandType.StoredProcedure

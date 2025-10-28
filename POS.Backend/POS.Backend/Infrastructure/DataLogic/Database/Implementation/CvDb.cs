@@ -34,7 +34,7 @@ namespace POS.Backend.Infrastructure.DataLogic.Database.Implementation
 
             try
             {
-                using var conn = new NpgsqlConnection(config.Value.ConnectionStrings.POSDb);
+                using var conn = new NpgsqlConnection(config.Value.ConnectionStrings.PosDb);
                 using var cmd = new NpgsqlCommand("sp_add_POS", conn)
                 {
                     CommandType = CommandType.StoredProcedure
@@ -109,7 +109,7 @@ namespace POS.Backend.Infrastructure.DataLogic.Database.Implementation
 
             try
             {
-                using var conn = new NpgsqlConnection(config.Value.ConnectionStrings.POSDb);
+                using var conn = new NpgsqlConnection(config.Value.ConnectionStrings.PosDb);
                 using var cmd = new NpgsqlCommand("sp_add_POS_file", conn)
                 {
                     CommandType = CommandType.StoredProcedure
