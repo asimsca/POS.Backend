@@ -7,6 +7,74 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="bin\Debug\net8.0\appsettings.Development.json" />
+    <Content Include="bin\Debug\net8.0\appsettings.json" />
+    <Content Include="bin\Debug\net8.0\appsettings.Production.json" />
+    <Content Include="bin\Debug\net8.0\appsettings.Staging.json" />
+    <Content Include="bin\Debug\net8.0\POS.Backend.deps.json" />
+    <Content Include="bin\Debug\net8.0\POS.Backend.runtimeconfig.json" />
+    <Content Include="bin\Debug\net8.0\POS.Backend.staticwebassets.endpoints.json" />
+    <Content Include="bin\Debug\net8.0\POS.Backend.staticwebassets.runtime.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.Extensions.Logging.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.Extensions.Options.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll" />
+    <None Include="bin\Debug\net8.0\Microsoft.OpenApi.dll" />
+    <None Include="bin\Debug\net8.0\Newtonsoft.Json.dll" />
+    <None Include="bin\Debug\net8.0\Npgsql.dll" />
+    <None Include="bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll" />
+    <None Include="bin\Debug\net8.0\POS.Backend.dll" />
+    <None Include="bin\Debug\net8.0\POS.Backend.exe" />
+    <None Include="bin\Debug\net8.0\POS.Backend.pdb" />
+    <None Include="bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll" />
+    <None Include="bin\Debug\net8.0\Serilog.AspNetCore.dll" />
+    <None Include="bin\Debug\net8.0\Serilog.dll" />
+    <None Include="bin\Debug\net8.0\Serilog.Extensions.Hosting.dll" />
+    <None Include="bin\Debug\net8.0\Serilog.Extensions.Logging.dll" />
+    <None Include="bin\Debug\net8.0\Serilog.Formatting.Compact.dll" />
+    <None Include="bin\Debug\net8.0\Serilog.Settings.Configuration.dll" />
+    <None Include="bin\Debug\net8.0\Serilog.Sinks.Console.dll" />
+    <None Include="bin\Debug\net8.0\Serilog.Sinks.Debug.dll" />
+    <None Include="bin\Debug\net8.0\Serilog.Sinks.File.dll" />
+    <None Include="bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll" />
+    <None Include="bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+    <None Include="bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+    <None Include="bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll" />
+    <None Include="bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll" />
+    <None Include="bin\Debug\net8.0\System.IO.Pipelines.dll" />
+    <None Include="bin\Debug\net8.0\System.Text.Encodings.Web.dll" />
+    <None Include="bin\Debug\net8.0\System.Text.Json.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.21" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.14.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="Npgsql" Version="9.0.4" />
+    <PackageReference Include="Serilog" Version="4.3.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 

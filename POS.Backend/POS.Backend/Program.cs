@@ -1,25 +1,33 @@
-var builder = WebApplication.CreateBuilder(args);
+using POS.Backend.Helper.Logging;
+using Microsoft.AspNetCore.Hosting;
+using Serilog;
+using POS.Backend;
 
-// Add services to the container.
+SerilogConfiguration.ConfigureLogging();
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+try
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    Log.Information("Starting POS web app...");
+
+    var builder = WebApplication.CreateBuilder(args);
+
+    // Telling .NET to use Serilog
+    builder.Host.UseSerilog();
+
+    var startup = new Startup(builder.Configuration);
+    startup.ConfigureServices(builder.Services);
+
+    var app = builder.Build();
+    startup.Configure(app, app.Environment);
+
+    app.Run();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "App startup failed");
+}
+finally
+{
+    Log.CloseAndFlush(); // Ensures logs are written on shutdown
 }
 
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
