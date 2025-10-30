@@ -16,6 +16,7 @@ namespace POS.Backend.Infrastructure.DependencyInjection
             services.AddScoped<IPOSLogic, POSLogic>();
             services.AddScoped<IAuthLogic, AuthLogic>();
             services.AddScoped<ISaleLogic, SaleLogic>();
+            services.AddScoped<IProductLogic, ProductLogic>();
             #endregion
 
             // Data Access Layer Service Collection
@@ -23,6 +24,7 @@ namespace POS.Backend.Infrastructure.DependencyInjection
             services.AddScoped<IPOSDb, POSDb>();
             services.AddScoped<IAuthDb, AuthDb>();
             services.AddScoped<ISaleDb, SaleDb>();
+            services.AddScoped<IProductDb, ProductDb>();
             #endregion
 
             // Data Access Layer Service Collection

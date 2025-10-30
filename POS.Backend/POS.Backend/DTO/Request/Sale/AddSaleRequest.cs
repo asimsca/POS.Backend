@@ -8,7 +8,6 @@ namespace POS.Models
     {
         public Guid CustomerId { get; set; }
         public Guid PaymentTypeId { get; set; }
-        public decimal TotalAmount { get; set; }
         public List<SaleItem> Items { get; set; } = new();
         public string? Remarks { get; set; }
     }

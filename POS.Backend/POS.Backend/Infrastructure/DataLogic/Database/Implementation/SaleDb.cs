@@ -40,13 +40,13 @@ namespace POS.Backend.Infrastructure.DataLogic.Database.Implementation
                 };
 
                 cmd.Parameters.AddWithValue("in_customer_id", request.CustomerId);
-                cmd.Parameters.AddWithValue("in_payment_type", request.PaymentTypeId);
-                cmd.Parameters.AddWithValue("in_total_amount", request.TotalAmount);
+                cmd.Parameters.AddWithValue("in_payment_type_id", request.PaymentTypeId);
                 cmd.Parameters.Add(new NpgsqlParameter("in_items", NpgsqlDbType.Jsonb)
                 {
                     Value = JsonConvert.SerializeObject(request.Items)
                 });
                 cmd.Parameters.AddWithValue("in_user_id", Guid.Parse(this.userAccessor.UserId));
+                cmd.Parameters.AddWithValue("in_remarks", request.Remarks ?? string.Empty);
 
                 cmd.Parameters.Add(new NpgsqlParameter("out_message", DbType.String) { Direction = ParameterDirection.Output });
                 cmd.Parameters.Add(new NpgsqlParameter("out_is_success", DbType.Boolean) { Direction = ParameterDirection.Output });
@@ -59,7 +59,7 @@ namespace POS.Backend.Infrastructure.DataLogic.Database.Implementation
 
                 baseResponse.IsSuccess = isSuccess;
                 baseResponse.Message = message;
-                baseResponse.ResponseCode = isSuccess ? HttpStatusCode.OK : HttpStatusCode.BadRequest;
+                baseResponse.ResponseCode = isSuccess ? HttpStatusCode.OK : HttpStatusCode.InternalServerError;
                 baseResponse.Data = message;
             }
             catch (Exception ex)
