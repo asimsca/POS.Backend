@@ -67,7 +67,7 @@ namespace POS.Backend.Infrastructure.DataLogic.Database.Implementation
                         {
                             Id = reader.GetGuid(0),
                             Name = reader.GetString(1),
-                            Description = reader.IsDBNull(2) ? null : reader.GetString(2),
+                            Description = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
                             CreatedDate = reader.GetDateTime(3),
                             CreatedBy = reader.GetGuid(4)
                         });
